@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    printf("%d", 15 - 37);
+    printf("%d", 15 - 37);      //用十进制显示15减去37的值
 
     return (0);
 }

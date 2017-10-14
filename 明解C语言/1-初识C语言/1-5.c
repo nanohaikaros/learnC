@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    printf("您好！\n我叫柴田望洋。\n");
+    printf("您好！\n我叫柴田望洋。\n");       //中间换行
 
     return (0);
 }
