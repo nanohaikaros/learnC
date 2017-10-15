@@ -12,14 +12,14 @@
 
 int main(void)
 {
-    float vx, vy;  
+    int vx, vy;  
 
     puts("请输入两个整数。");
 
-    printf("整数A："); scanf("%f", &vx);
-    printf("整数B："); scanf("%f", &vy);
+    printf("整数A："); scanf("%d", &vx);
+    printf("整数B："); scanf("%d", &vy);
 
-    printf("A的值是B的%.f%%。", vx / vy * 100);
+    printf("A的值是B的%d%%。", vx * 100 / vy );
 
     return (0);
 }
