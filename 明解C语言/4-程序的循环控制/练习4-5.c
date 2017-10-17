@@ -20,7 +20,7 @@ int main(void)
     dig = 0;
     do {
         num /= 10;                 //右移一位
-        dig ++;
+        dig++;
     } while (num > 0);
     printf("该整数的位数是%d。\n", dig);
 

@@ -11,7 +11,7 @@ int main(void)
 
     do {
         sum += no;          //给sum的值加上no
-        no ++;            //no的值递增（增加1）
+        no++;            //no的值递增（增加1）
     } while (no <= 5);
 
     printf("1到5的合计值是%d。\n", sum);
