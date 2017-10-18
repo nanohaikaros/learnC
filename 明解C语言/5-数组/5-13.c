@@ -1,5 +1,5 @@
 /*
-    ÊäÈëÑ§ÉúµÄ·ÖÊı²¢ÏÔÊ¾³ö·Ö²¼Çé¿ö
+    è¾“å…¥å­¦ç”Ÿçš„åˆ†æ•°å¹¶æ˜¾ç¤ºå‡ºåˆ†å¸ƒæƒ…å†µ
 */
 
 #include <stdio.h>
@@ -9,29 +9,29 @@
 int main(void)
 {
     int i, j;
-    int num;                        //Êµ¼ÊµÄÈËÊı
-    int tensu[NUMBER];              //Ñ§ÉúµÄ·ÖÊı
-    int bunpu[11] = {0};            //·Ö²¼Í¼
+    int num;                        //å®é™…çš„äººæ•°
+    int tensu[NUMBER];              //å­¦ç”Ÿçš„åˆ†æ•°
+    int bunpu[11] = {0};            //åˆ†å¸ƒå›¾
 
-    printf("ÇëÊäÈëÑ§ÉúÈËÊı£º");
+    printf("è¯·è¾“å…¥å­¦ç”Ÿäººæ•°ï¼š");
     do {
         scanf("%d", &num);
         if (num < 1 || num > NUMBER)
-            printf("\aÈËÊı·¶Î§[1µ½%d]:", NUMBER);
+            printf("\aäººæ•°èŒƒå›´[1åˆ°%d]:", NUMBER);
     } while (num < 1 || num > NUMBER);
 
-    puts("ÇëÊäÈëÑ§ÉúµÄ·ÖÊı¡£");
+    puts("è¯·è¾“å…¥å­¦ç”Ÿçš„åˆ†æ•°ã€‚");
     for (i = 0; i < num; i++) {
-        printf("%2dºÅ£º", i + 1);
+        printf("%2då·ï¼š", i + 1);
         do {
             scanf("%d", &tensu[i]);
             if (tensu[i] < 0 || tensu[i] > 100)
-                printf("\a·ÖÊı·¶Î§[0µ½100]:");
+                printf("\aåˆ†æ•°èŒƒå›´[0åˆ°100]:");
         } while (tensu[i] < 0 || tensu[i] > 100);
         bunpu[tensu[i] / 10]++;
     }
 
-    puts("\n¡õ ·Ö²¼Í¼ ¡õ");
+    puts("\nâ–¡ åˆ†å¸ƒå›¾ â–¡");
     printf("      100:");
     for (j = 0; j < bunpu[10]; j++)
         putchar('*');
