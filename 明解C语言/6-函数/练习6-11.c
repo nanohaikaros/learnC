@@ -1,6 +1,72 @@
 /*
-    ç¼–å†™ä¸€æ®µç¨‹åºï¼Œä½¿ç”¨äºŒç»´æ•°ç»„æ“ä½œ5åå­¦ç”Ÿ3ä¸ªç§‘ç›®ï¼ˆè¯­æ–‡ã€æ•°å­¦ã€è‹±è¯­ï¼‰çš„åˆ†æ•°ï¼Œå®Œæˆå¦‚ä¸‹å¤„ç†ã€‚
-    ä¾‹1ï¼šè®¡ç®—æ¯ç§‘çš„æœ€é«˜åˆ†ã€‚
-    ä¾‹2ï¼šè®¡ç®—æ¯åå­¦ç”Ÿ3ä¸ªç§‘ç›®çš„å¹³å‡åˆ†ã€‚
+    ±àÐ´Ò»¶Î³ÌÐò£¬Ê¹ÓÃ¶þÎ¬Êý×é²Ù×÷5ÃûÑ§Éú3¸ö¿ÆÄ¿£¨ÓïÎÄ¡¢ÊýÑ§¡¢Ó¢Óï£©µÄ·ÖÊý£¬Íê³ÉÈçÏÂ´¦Àí¡£
+    Àý1£º¼ÆËãÃ¿¿ÆµÄ×î¸ß·Ö¡£
+    Àý2£º¼ÆËãÃ¿ÃûÑ§Éú3¸ö¿ÆÄ¿µÄÆ½¾ù·Ö¡£
 */
 
+#include <stdio.h>
+
+#define NUMBER 5
+#define COUNT 3
+
+int max_of(int vc[], int no)
+{
+    int i;
+    int max = vc[0];
+    for (i = 1; i < no; i++)
+        if (vc[i] > max)
+            max = vc[i];
+    return (max);
+}
+
+double avg_of(double vc, int no)
+{
+    return (vc / no);
+    
+}
+
+int main(void)
+{
+    int i, j;
+    int vc[NUMBER][COUNT];
+    int chi[NUMBER];
+    int eng[NUMBER];
+    int mat[NUMBER];
+    int max_c, max_e, max_m;
+    int avg[NUMBER];
+
+
+    printf("ÇëÊäÈë%dÃûÑ§ÉúµÄ·ÖÊý¡£\n", NUMBER);
+    for (i = 0; i < NUMBER; i++) {
+        puts("ÓïÎÄ¡¢ÊýÑ§¡¢Ó¢Óï£º");
+        for (j = 0; j < COUNT; j++) {
+            putchar('=');
+            scanf("%d", &vc[i][j]);
+        }
+    }
+
+    for (i = 0; i < NUMBER; i++) {
+        chi[i] = vc[i][0];
+        eng[i] = vc[i][1];
+        mat[i] = vc[i][2];
+
+    }
+
+    max_c = max_of(chi, NUMBER);
+    max_e = max_of(eng, NUMBER);         
+    max_m = max_of(mat, NUMBER);         
+
+    printf("ÓïÎÄµÄ×î¸ß·Ö=%d\n", max_c);
+    printf("Ó¢ÓïµÄ×î¸ß·Ö=%d\n", max_e);
+    printf("ÊýÑ§µÄ×î¸ß·Ö=%d\n", max_m);
+
+    
+        for (i = 0; i < NUMBER; i++){
+            avg[i] = vc[i][0] + vc[i][1] + vc[i][2];
+            printf("%dÆ½¾ù·Ö:%.2f\n", i, avg_of(avg[i], COUNT));
+        }
+    
+    
+
+    return (0);
+}
