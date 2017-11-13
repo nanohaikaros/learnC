@@ -1,35 +1,35 @@
 /*
-    Í¨¹ıÖ¸Õë¼ä½ÓµØ²Ù×÷Éí¸ß
+    é€šè¿‡æŒ‡é’ˆé—´æ¥åœ°æ“ä½œèº«é«˜
 */
 
 #include <stdio.h>
 
 int main(void)
 {
-    int sato = 178;         //×ôÌÙµÄÉí¸ß
-    int sanaka = 175;       //×ôÖĞµÄÉí¸ß
-    int hiraki = 165;       //Æ½Ä¾µÄÉí¸ß
-    int masaki = 179;       //ÕæÆéµÄÉí¸ß
+    int sato = 178;         //ä½è—¤çš„èº«é«˜
+    int sanaka = 175;       //ä½ä¸­çš„èº«é«˜
+    int hiraki = 165;       //å¹³æœ¨çš„èº«é«˜
+    int masaki = 179;       //çœŸå´çš„èº«é«˜
 
     int *isako, *hiroko;
 
-    isako = &sato;          //isakoÖ¸Ïòsato
-    hiroko = &masaki;       //hirokoÖ¸Ïòmasaki
+    isako = &sato;          //isakoæŒ‡å‘sato
+    hiroko = &masaki;       //hirokoæŒ‡å‘masaki
 
-    printf("ÒÁÉ³×ÓÏ²»¶µÄÈËµÄÉí¸ß£º%d\n", *isako);
-    printf("Ñó×ÓÏ²»¶µÄÈËµÄÉí¸ß£º%d\n", *hiroko);
+    printf("ä¼Šæ²™å­å–œæ¬¢çš„äººçš„èº«é«˜ï¼š%d\n", *isako);
+    printf("æ´‹å­å–œæ¬¢çš„äººçš„èº«é«˜ï¼š%d\n", *hiroko);
 
-    isako = &sanaka;        //isakoÖ¸Ïòsanaka
+    isako = &sanaka;        //isakoæŒ‡å‘sanaka
 
-    *hiroko = 180;          //½«hirokoÖ¸ÏòµÄ¶ÔÏó¸³Îª180
+    *hiroko = 180;          //å°†hirokoæŒ‡å‘çš„å¯¹è±¡èµ‹ä¸º180
 
     putchar('\n');
-    printf("×ôÌÙµÄÉí¸ß£º%d\n", sato);
-    printf("×ôÖĞµÄÉí¸ß£º%d\n", sanaka);
-    printf("Æ½Ä¾µÄÉí¸ß£º%d\n", hiraki);
-    printf("ÕæÆéµÄÉí¸ß£º%d\n", masaki);
-    printf("ÒÁÉ³×ÓÏ²»¶µÄÈËµÄÉí¸ß£º%d\n", *isako);
-    printf("Ñó×ÓÏ²»¶µÄÈËµÄÉí¸ß£º%d\n", *hiroko);
+    printf("ä½è—¤çš„èº«é«˜ï¼š%d\n", sato);
+    printf("ä½ä¸­çš„èº«é«˜ï¼š%d\n", sanaka);
+    printf("å¹³æœ¨çš„èº«é«˜ï¼š%d\n", hiraki);
+    printf("çœŸå´çš„èº«é«˜ï¼š%d\n", masaki);
+    printf("ä¼Šæ²™å­å–œæ¬¢çš„äººçš„èº«é«˜ï¼š%d\n", *isako);
+    printf("æ´‹å­å–œæ¬¢çš„äººçš„èº«é«˜ï¼š%d\n", *hiroko);
 
     return (0);
 
